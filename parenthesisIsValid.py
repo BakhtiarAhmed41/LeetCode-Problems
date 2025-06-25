@@ -1,26 +1,17 @@
 class Solution(object):
     def isValid(self, s):
-        
-        result = True
+        stack = []
+        mapping = {')': '(', ']': '[', '}': '{'}
 
-        if "(" in s:
-            if ")" in s and s.count("(") == s.count(")"):
-                result = True
+        for char in s:
+            if char in mapping.values():
+                stack.append(char)
+            elif char in mapping:
+                if not stack or stack[-1] != mapping[char]:
+                    return False
+                stack.pop()
             else:
-                result = False
-        
-        if "[" in s:
-            if "]" in s and s.count("[") == s.count("]"):
-                result = True
-            else:
-                result = False
-        
-        if "{" in s:
-            if "}" in s and s.count("{") == s.count("}"):
-                result = True
-            else:
-                result = False
+                continue  
 
-    
-        return result
+        return not stack
         
