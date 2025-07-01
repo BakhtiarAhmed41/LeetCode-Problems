@@ -1,10 +1,7 @@
 class Solution(object):
     def addBinary(self, a, b):
         
-        sum = int(a , 2) + int(b , 2)
-        sum = str(bin(sum))
+        sum = bin(int(a , 2) + int(b , 2))
 
         
-        return sum
-        
-        
+        return sum[2:len(sum)]
