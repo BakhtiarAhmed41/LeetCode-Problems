@@ -1,1 +1,1 @@
-This repository contains my solutions to the LeetCode problems. Each day, I tackle a new coding problem provided by LeetCode, aiming to improve my problem-solving skills and deepen my understanding of coding.
+This repository contains my answers/solutions to the LeetCode problems. Each day, I tackle a new coding problem provided by LeetCode, aiming to improve my problem-solving skills and deepen my understanding of coding.
