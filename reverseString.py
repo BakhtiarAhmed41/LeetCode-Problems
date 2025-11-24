@@ -1,7 +1,10 @@
 class Solution(object):
     def reverseString(self, s):
-        """
-        :type s: List[str]
-        :rtype: None Do not return anything, modify s in-place instead.
-        """
-        
+        x = ""
+        for i in s:
+            x += i
+
+        for i in range(len(s)):
+            s[i] = x[len(x)-i-1]
+
+        return s
