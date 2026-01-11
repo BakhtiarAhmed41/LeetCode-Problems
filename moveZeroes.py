@@ -1,17 +1,10 @@
 class Solution(object):
     def moveZeroes(self, nums):
-        
-        nums2 = []
-        nums2 = nums
+        k = 0
+        for i in nums:
+            if i != 0:
+                nums[k] = i
+                k += 1
 
-        nums2.sort()
-        nums.remove(0)
-
-        for i in nums2:
-            if i == 0:
-                nums.append(i)
-
-
-        return nums
-
-    
+        for i in range(k, len(nums)):
+            nums[i] = 0
